@@ -1,0 +1,63 @@
+MA RENTRÉE EN 6e — METTRE LE SITE EN LIGNE
+==========================================
+
+Ce que contient ce zip
+----------------------
+  site/            -> LE DOSSIER À DÉPOSER chez l'hébergeur (tout son contenu, tel quel)
+    index.html       la page du site (tous les textes en français)
+    css/ js/         l'apparence et le fonctionnement (traductions comprises)
+    assets/          images, captures, polices
+    .htaccess        réglages de sécurité pour les hébergeurs Apache (OVH, o2switch, Hostinger, IONOS…)
+    _headers         réglages de sécurité pour Netlify ou Cloudflare Pages
+    robots.txt       autorise les moteurs de recherche
+  LISEZ-MOI.txt    ce fichier (ne pas déposer en ligne)
+
+Attention : .htaccess commence par un point, il peut être caché sur votre ordinateur.
+Il doit bien être envoyé avec le reste.
+
+
+AVANT DE DÉPOSER (5 minutes)
+----------------------------
+Ouvrez site/index.html avec un éditeur de texte (Bloc-notes, TextEdit en mode texte, VS Code)
+et cherchez « [à compléter] » (page Mentions légales, obligatoire en France) :
+  - adresse de l'association
+  - directeur ou directrice de la publication
+  - nom, adresse et téléphone de l'hébergeur
+Enregistrez. (Optionnel : ajouter le téléphone du secrétariat du collège.)
+
+
+OPTION 1 — Le plus simple et gratuit : Netlify (5 minutes)
+---------------------------------------------------------
+1. Allez sur https://app.netlify.com/drop et créez un compte gratuit.
+2. Glissez-déposez le DOSSIER « site » dans la page.
+3. Le site est en ligne avec une adresse du type https://xxxx.netlify.app (HTTPS inclus).
+4. Dans « Site configuration › Change site name », choisissez un nom (ex. ma-rentree-6e).
+5. Pour mettre à jour plus tard : « Deploys » puis glissez à nouveau le dossier.
+Le fichier _headers est appliqué automatiquement.
+
+OPTION 2 — Cloudflare Pages (gratuit)
+-------------------------------------
+Workers & Pages › Create › Pages › « Upload assets » › déposez le contenu du dossier « site ».
+Le fichier _headers est appliqué automatiquement.
+
+OPTION 3 — Hébergeur classique (OVH, o2switch, IONOS, Hostinger…)
+------------------------------------------------------------------
+1. Activez le certificat HTTPS gratuit (Let's Encrypt) dans l'espace client.
+2. Avec FileZilla (ou le gestionnaire de fichiers de l'hébergeur), envoyez TOUT le contenu
+   du dossier « site » dans le dossier web (souvent « www » ou « public_html »).
+3. Vérifiez que .htaccess est bien envoyé (dans FileZilla : Serveur › Forcer l'affichage des fichiers cachés).
+
+
+APRÈS LA MISE EN LIGNE — vérifications
+--------------------------------------
+- Ouvrez le site sur un téléphone et un ordinateur, changez de langue, ouvrez la démo Pronote.
+- Testez la sécurité : https://securityheaders.com (note A attendue).
+- Si la démo Pronote ne s'affiche pas dans la fenêtre : le bouton « Ouvrir dans un nouvel onglet » fonctionne toujours.
+
+À FAIRE CHAQUE ANNÉE (fin août)
+-------------------------------
+- Mettre à jour la page Bourse : dates, montants, plafonds (source : education.gouv.fr et service-public.fr).
+- Vérifier que les liens officiels fonctionnent toujours.
+
+Si vous modifiez un texte, la version française change aussitôt. Les traductions de ce texte
+ne se mettent pas à jour toutes seules : il faut les refaire (demandez à Claude avec le projet complet).
